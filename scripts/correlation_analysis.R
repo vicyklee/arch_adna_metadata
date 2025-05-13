@@ -161,3 +161,9 @@ corrplot::corrplot(cor_mat, p.mat = p_adjusted_mat,
                    insig = 'label_sig', pch.col = 'yellow2',
                    tl.srt = 45, , tl.cex = 1, cl.align.text = "l", cl.ratio = 0.2)
 invisible(dev.off())
+
+
+#------------------------------------------------------------------------------#
+# sessionInfo.txt ####
+#------------------------------------------------------------------------------#
+writeLines(capture.output(sessionInfo()), here("sessionInfo","correlation_analysis_sessionInfo.txt"))

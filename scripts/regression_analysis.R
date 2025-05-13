@@ -725,3 +725,8 @@ ci_mr_pc_plot <- ggplot(summary_mr_pc, aes(x = estimate, y = factor(term, levels
   guides(col = guide_legend(order = 1), alpha = guide_legend(order = 2), shape = guide_legend(order = 3))
 
 savePDF(ci_mr_pc_plot, file = here(fig_output_path,file_version,"ci_coef_fraclogit_xbx_mr_pc.pdf"), width = 14, height = 5)
+
+#------------------------------------------------------------------------------#
+# sessionInfo.txt ####
+#------------------------------------------------------------------------------#
+writeLines(capture.output(sessionInfo()), here("sessionInfo","regression_analysis_sessionInfo.txt"))

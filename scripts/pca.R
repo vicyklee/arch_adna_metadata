@@ -116,3 +116,8 @@ p <- c(p2,p1)
 p <- patchwork::wrap_plots(p, nrows = 2) + patchwork::plot_annotation(tag_levels = 'A') & theme(plot.tag=element_text(size = 12, face = "bold"))
 savePDF(p, file = here(fig_output_path,file_version,"pca_x_contrib_combined.pdf"), height = 8, width = 16)
 
+#------------------------------------------------------------------------------#
+# sessionInfo.txt ####
+#------------------------------------------------------------------------------#
+writeLines(capture.output(sessionInfo()), here("sessionInfo","pca_sessionInfo.txt"))
+

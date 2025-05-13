@@ -122,3 +122,7 @@ p_data_boxplot_var <- patchwork::wrap_plots(list(p_data_boxplot,
 
 savePDF(p_data_boxplot_var, here(fig_output_path,file_version,"y_boxplot_var.pdf"), width = 8, height = 4)
 
+#------------------------------------------------------------------------------#
+# sessionInfo.txt ####
+#------------------------------------------------------------------------------#
+writeLines(capture.output(sessionInfo()), here("sessionInfo","variance_analysis_sessionInfo.txt"))

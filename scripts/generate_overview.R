@@ -215,4 +215,8 @@ p <- list(
 
 p <- patchwork::wrap_plots(p, nrow = 2)
 savePDF(p, file = here(fig_output_path,file_version,"distributions_x_combined.pdf"), width = 8, height = 4)
- 
+
+#------------------------------------------------------------------------------#
+# sessionInfo.txt ####
+#------------------------------------------------------------------------------#
+writeLines(capture.output(sessionInfo()), here("sessionInfo","generate_overview_sessionInfo.txt"))
