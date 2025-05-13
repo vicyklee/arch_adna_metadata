@@ -1,0 +1,5 @@
+c(`Kruskal-Wallis chi-squared` = 64.9330928362812)
+c(df = 29)
+0.000144708821316358
+Kruskal-Wallis rank sum test
+proportion by CitationID
