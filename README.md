@@ -32,6 +32,8 @@ install.packages(c("tidyverse", "here",
   "factoextra", "GGally", "ggh4x", "MetBrewer", "RColorBrewer", "patchwork"))
 ```
 
+You should also create a ```figures/``` directory under the project directory to store the figure output.
+
 ## File descriptions
 - ```generate_overview.R```: Generate the overview figures
 - ```variance_analysis.R```: Analyse variances across metadata and publications
