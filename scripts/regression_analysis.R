@@ -52,7 +52,7 @@ readr::write_csv(fraclogit_summary, here(res_output_path,file_version,"fraclogit
 #------------------------------------------------------------------------------#
 # Heatmap 
 heatmap_fraclogit <- plot_coef_heatmap(fraclogit$summary)
-savePDF(heatmap_fraclogit,file = here(fig_output_path,file_version,"heatmap_fraclogit.pdf"), width = 8)
+savePDF(heatmap_fraclogit,file = here(fig_output_path,file_version,"heatmap_fraclogit.pdf"), width = 8, height = 3)
 
 # CI plot
 ci_plot_fraclogit <- ggplot(fraclogit_summary,
@@ -447,7 +447,7 @@ readr::write_csv(fraclogit_summary_mr_pc, here(res_output_path,file_version,"fra
 # Heatmap
 heatmap_fraclogit_mr_pc <- plot_coef_heatmap_waldtest(fraclogit_summary_mr_pc) +
   theme(legend.key.height = unit(0.15,"in"))
-savePDF(heatmap_fraclogit_mr_pc,file = here(fig_output_path,file_version,"heatmap_fraclogit_mr_pc.pdf"), width = 8)
+savePDF(heatmap_fraclogit_mr_pc,file = here(fig_output_path,file_version,"heatmap_fraclogit_mr_pc.pdf"), width = 8, height = 3)
 
 # CI plot
 ci_mr_pc_plot_fraclogit <- ggplot(fraclogit_summary_mr_pc,
