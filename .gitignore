@@ -50,4 +50,6 @@ rsconnect/
 
 # Other not from the template
 .DS_Store
-figures/
+figures/*.pdf
+figures/*.png
+figure/*.jpg
