@@ -10,6 +10,7 @@ library(betareg)
 library(sandwich)
 library(lmtest)
 library(car)
+library(statmod) # suggested in betareg but somehow required here
 
 # required for plotting
 library(patchwork)
