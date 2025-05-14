@@ -298,7 +298,7 @@ plot_coef_heatmap <- function(summary, limits = NULL) {
   ) + 
     geom_tile(colour = "grey", aes(fill = estimate), linewidth = 0.5) +
     geom_text(aes(label = sig), colour = "grey30", size = 5, vjust = 0.8) +
-    labs(fill=expression(hat(beta))) +
+    labs(fill=expression(widehat(beta))) +
     scale_fill_gradientn(colors = c("#F7AA14FF","#F5D000FF","#F7E690FF","white","#1BB6AFFF","#088BBEFF","#172869FF"), limits = limits) +
     theme_minimal() +
     theme(axis.text.x = element_text(angle=45, hjust=0),
@@ -306,10 +306,6 @@ plot_coef_heatmap <- function(summary, limits = NULL) {
           axis.title = element_blank())+
     scale_y_discrete(labels = lab_mapping) +
     scale_x_discrete(labels = lab_mapping, position = "top") +
-    # scale_alpha_discrete(name = "P-value",
-    #                      breaks = c("*", ""),
-    #                      labels = c(expression(""< 0.05), expression("">= 0.05)),
-    #                      range = c(0, 1))  +
     coord_equal() +
     guides(size = "none")
 }
@@ -340,7 +336,7 @@ plot_coef_heatmap_waldtest <- function(summary, limits = NULL) {
   ) + 
     geom_tile(colour = "grey", aes(fill = estimate), linewidth = 0.5) +
     geom_text(aes(label = sig, alpha = waldtest_sig), colour = "grey30", size = 5, vjust = 0.8) +
-    labs(fill=expression(hat(beta))) +
+    labs(fill=expression(widehat(beta))) +
     scale_fill_gradientn(colors = c("#F7AA14FF","#F5D000FF","#F7E690FF","white","#1BB6AFFF","#088BBEFF","#172869FF"), limits = limits) +
     theme_minimal() +
     theme(axis.text.x = element_text(angle=45, hjust=0),
