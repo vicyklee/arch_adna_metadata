@@ -296,8 +296,7 @@ plot_coef_heatmap <- function(summary, limits = NULL) {
     summary, 
     aes(y = factor(term, levels=rev(sort(unique(term)))),, x = y)
   ) + 
-    geom_tile(colour = "grey", aes(fill = estimate), size = 0.5) +
-    # ggforce::geom_circle(aes(x0 = y0, y0 = term0, r = 0.5*abs(estimate/max(estimate)), fill = estimate), colour = NA) +
+    geom_tile(colour = "grey", aes(fill = estimate), linewidth = 0.5) +
     geom_text(aes(label = sig), colour = "grey30", size = 5, vjust = 0.8) +
     labs(fill=expression(hat(beta))) +
     scale_fill_gradientn(colors = c("#F7AA14FF","#F5D000FF","#F7E690FF","white","#1BB6AFFF","#088BBEFF","#172869FF"), limits = limits) +
@@ -339,8 +338,7 @@ plot_coef_heatmap_waldtest <- function(summary, limits = NULL) {
     summary, 
     aes(y = factor(term, levels=rev(sort(unique(term)))),, x = y)
   ) + 
-    geom_tile(colour = "grey", aes(fill = estimate), size = 0.5) +
-    # ggforce::geom_circle(aes(x0 = y0, y0 = term0, r = 0.5*abs(estimate/max(estimate)), fill = estimate), colour = NA) +
+    geom_tile(colour = "grey", aes(fill = estimate), linewidth = 0.5) +
     geom_text(aes(label = sig, alpha = waldtest_sig), colour = "grey30", size = 5, vjust = 0.8) +
     labs(fill=expression(hat(beta))) +
     scale_fill_gradientn(colors = c("#F7AA14FF","#F5D000FF","#F7E690FF","white","#1BB6AFFF","#088BBEFF","#172869FF"), limits = limits) +
