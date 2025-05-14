@@ -50,3 +50,4 @@ rsconnect/
 
 # Other not from the template
 .DS_Store
+sessionInfo/*
