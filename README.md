@@ -12,6 +12,7 @@ This project was performed on R version 4.4.0 and requires the following package
 #### Statistical analysis
 - ```FactoMineR```
 - ```betareg```
+- ```statmod```
 - ```sandwich```
 - ```lmtest```
 - ```car```
@@ -28,7 +29,7 @@ This project was performed on R version 4.4.0 and requires the following package
 You can install them using:
 ```r
 install.packages(c("tidyverse", "here",
-  "FactoMineR", "betareg", "sandwich", "lmtest", "car", "rstatix", "FSA",
+  "FactoMineR", "betareg", "statmod", "sandwich", "lmtest", "car", "rstatix", "FSA",
   "factoextra", "GGally", "ggh4x", "MetBrewer", "RColorBrewer", "patchwork"))
 ```
 
