@@ -53,4 +53,6 @@ The following will be read in the scripts above (i.e. no need to run):
 ```sessionInfo/``` contains version information about R, the OS and attached or loaded packages for running the scripts by the authors.
 
 #### Data, figures & output
-```data/```, ```figures/``` and ```output/``` contain the input or output of the scripts.
+```data/``` and ```output/``` contain the input and some output of the scripts respectively.
+
+```figures/``` is an empty folder in case you want to run the entire script(s) and export figures.
