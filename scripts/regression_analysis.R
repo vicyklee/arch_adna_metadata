@@ -43,7 +43,8 @@ fraclogit_summary <- fraclogit$summary %>%
          ci.upper = estimate + qnorm(1 - alpha.adj / 2) * std.error,
          y = as.factor(y),
          y = factor(y, levels = y_lab_order)) %>%
-  ungroup() 
+  ungroup() %>%
+  arrange(y)
 
 readr::write_csv(fraclogit_summary, here(res_output_path,file_version,"fraclogit_summary.csv"))
 
