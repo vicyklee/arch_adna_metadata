@@ -134,7 +134,7 @@ rownames(p_adjusted_mat) <- lab_mapping[rownames(p_adjusted_mat)]
 colnames(p_adjusted_mat) <- lab_mapping[colnames(p_adjusted_mat)]
 
 # Plot
-pdf(here(fig_output_path,file_version,paste0("corrplot_yx_",method,".pdf")))
+pdf(here(fig_output_path,file_version,paste0("corrplot_yx_",method,".pdf")), width = 10, height = 3.5)
 corrplot::corrplot(cor_mat, p.mat = p_adjusted_mat,
                    sig.level = c(0.001, 0.01, 0.05), pch.cex = 0.9,
                    insig = 'label_sig', pch.col = 'yellow2',
@@ -155,7 +155,7 @@ rownames(p_adjusted_mat) <- lab_mapping[rownames(p_adjusted_mat)]
 colnames(p_adjusted_mat) <- lab_mapping[colnames(p_adjusted_mat)]
 
 # Plot
-pdf(here(fig_output_path,file_version,paste0("corrplot_yx_",method,".pdf")))
+pdf(here(fig_output_path,file_version,paste0("corrplot_yx_",method,".pdf")), width = 10, height = 3.5)
 corrplot::corrplot(cor_mat, p.mat = p_adjusted_mat,
                    sig.level = c(0.001, 0.01, 0.05), pch.cex = 0.9,
                    insig = 'label_sig', pch.col = 'yellow2',
