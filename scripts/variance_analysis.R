@@ -27,7 +27,8 @@ y_long <- y %>%
   mutate(CitationID = factor(CitationID, levels = CitationID_order), # relevel CitationID
          category = ifelse(data %in% extended_cols, # add categories
                            "Extended", "Core"),
-         category = factor(category, levels = c("Core", "Extended")))
+         category = factor(category, levels = c("Core", "Extended")),
+         data = factor(data, levels = y_lab_order))
 
 # Variance of the metadata fields
 var_data <- y_long %>%
@@ -77,8 +78,6 @@ p_data_boxplot <- ggplot(y_long,
   theme_minimal() +
   theme(panel.grid.minor.y = element_blank(),
         panel.grid.major.y =  element_blank(),
-        # panel.border = element_rect(fill = NA, colour = NA),
-        # axis.ticks.x = element_line(colour = "grey"),
         axis.title.y = element_blank(),
         ggh4x.axis.nestline = element_line(linetype = 1),
         axis.text.y.left = element_text(margin = margin(l = 5, r = 2)),
@@ -102,8 +101,6 @@ p_var_data <- ggplot(var_data) +
   theme(
     panel.grid.minor.y = element_blank(),
     panel.grid.major.y =  element_blank(),
-    # panel.border = element_rect(fill = NA, colour = "grey"),
-    # axis.ticks.x = element_line(colour = "grey"),
     axis.title.y = element_blank(),
     ggh4x.axis.nestline = element_line(linetype = 1),
     axis.text.y.left = element_text(margin = margin(l = 5, r = 2)),
