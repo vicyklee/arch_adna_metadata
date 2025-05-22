@@ -68,6 +68,6 @@ theme_pca <-  theme(legend.position = "none",
 #------------------------------------------------------------------------------#
 # Colours for each y or x if applicable
 #------------------------------------------------------------------------------#
-y_cols <- c(MetBrewer::met.brewer("Hiroshige", n = 18)[c(10:15,1,16:18,2:7)])
+y_cols <- c(MetBrewer::met.brewer("Hiroshige", n = 18)[1:7], MetBrewer::met.brewer("Hiroshige", n = 18)[10:18])
 x_cols <- MetBrewer::met.brewer("VanGogh1",7)[1:5]
 pc_cols1 <- rev(RColorBrewer::brewer.pal(6, "Blues"))
