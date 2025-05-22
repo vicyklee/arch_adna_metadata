@@ -32,7 +32,7 @@ readr::write_csv(pca_y_eig, here(res_output_path,file_version,"pca_y_eig.csv"))
 
 # Plot
 y_vars <- sort(names(y))
-y_subtitle <- "Completeness of metadata"
+y_subtitle <- "Metadata completeness"
 
 # PCA graph of variables
 p <- list()
@@ -44,11 +44,12 @@ for (i in c(1,3,5)){
   p[[i]]$labels$y <- sub("Dim", "PC", p[[i]]$labels$y)
   savePDF(p[[i]], file = here(fig_output_path,file_version,paste0("pca_y_", i, "_", i+1, ".pdf")), width = 4.5, height = 4.5)
 }
+
 # Remove empty list elements
 p <- Filter(Negate(is.null), p)
 # For supplementary
 p <- patchwork::wrap_plots(p[2:3], nrows = 1) + patchwork::plot_annotation(tag_levels = 'A') & theme(plot.tag=element_text(size = 12, face = "bold"))
-savePDF(p,file = here(fig_output_path,file_version,"pca_y_3to6.pdf"), height = 4.5)
+savePDF(p,file = here(fig_output_path,file_version,"pca_y_3to6.pdf"), height = 5, width = 10)
 
 # Scree plot
 p <- factoextra::fviz_screeplot(pca_y, barcolor = NA, barfill = MetBrewer::met.brewer("Hiroshige")[10], ncp = 16, subtitle = y_subtitle)
@@ -79,7 +80,7 @@ readr::write_csv(pca_x_eig, here(res_output_path,file_version,"pca_x_eig.csv"))
 
 # Plot
 x_vars <- sort(names(x))
-x_subtitle <- "Explanatory variables"
+x_subtitle <- "Candidate explanatory variables"
 
 # PCA graph of variables
 p <- list()
@@ -94,7 +95,7 @@ for (i in c(1,3)){
 # Remove empty list elements
 p <- Filter(Negate(is.null), p)
 p <- patchwork::wrap_plots(p, nrows = 1) + patchwork::plot_annotation(tag_levels = 'A') & theme(plot.tag=element_text(size = 12, face = "bold"))
-savePDF(p,file = here(fig_output_path,file_version,"pca_x_1to3.pdf"), height = 4.5)
+savePDF(p,file = here(fig_output_path,file_version,"pca_x_1to3.pdf"), height = 5, width = 10)
 
 # Scree plot
 p <- factoextra::fviz_screeplot(pca_x, barcolor = NA, barfill = MetBrewer::met.brewer("VanGogh1")[2], ncp = 5, subtitle = x_subtitle)
