@@ -50,6 +50,8 @@ data <- data %>%
   mutate_at(vars(-(c(aDNAID, Resampled, Country, CitationID))), ~ ifelse(is.na(.), 0.5, .))
 # 1: reported / 0: not reported / 0.5: not reported but previously published
 
+# readr::write_csv(data, here("output","2025_aDNAArch_data_binary.csv"))
+
 # Aggregate presence/absence per sample into proportion per publication
 data_new <- filter(data, Resampled == 0)
 # "_new": incl. only newly sequenced samples
