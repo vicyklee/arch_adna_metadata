@@ -1,5 +1,5 @@
-c(`Kruskal-Wallis chi-squared` = 199.675517675401)
+c(`Kruskal-Wallis chi-squared` = 199.758852827505)
 c(df = 15)
-2.47295665914033e-34
+2.37840645258507e-34
 Kruskal-Wallis rank sum test
 proportion by data
